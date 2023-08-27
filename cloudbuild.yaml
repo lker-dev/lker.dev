@@ -1,8 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'asia-northeast1-docker.pkg.dev/lker-dev/lker-dev/lker.dev:latest', '.']
-images:
-- 'asia-northeast1-docker.pkg.dev/lker-dev/lker-dev/lker.dev:latest'
-options:
- logging: CLOUD_LOGGING_ONLY
-
