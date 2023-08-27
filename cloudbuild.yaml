@@ -3,4 +3,5 @@ steps:
   args: ['build', '-t', 'asia-northeast1-docker.pkg.dev/portfolio-website-396323/portfolio-website/portfolio-website:latest', '.']
 images:
 - 'asia-northeast1-docker.pkg.dev/portfolio-website-396323/portfolio-website/portfolio-website:latest'
+logging: CLOUD_LOGGING_ONLY
 
