@@ -1,0 +1,8 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'asia-northeast1-docker.pkg.dev/portfolio-website-396323/portfolio-website/portfolio-website:latest', '.']
+images:
+- 'asia-northeast1-docker.pkg.dev/portfolio-website-396323/portfolio-website/portfolio-website:latest'
+options:
+ logging: CLOUD_LOGGING_ONLY
+
