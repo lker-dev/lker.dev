@@ -1,0 +1,249 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Your Styles Begin Here */
+
+/* Google Font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Global Font Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Using Roboto as the default font */
+    font-size: 12px; /* This is a typical base size, but can be adjusted */
+    line-height: 1.5; /* Good for readability */
+    color: #333; /* A soft black for text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500; /* Semi-bold for headers */
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5em; /* 40px */
+}
+
+h2 {
+    font-size: 2em; /* 32px */
+}
+
+h3 {
+    font-size: 1.75em; /* 28px */
+}
+
+h4 {
+    font-size: 1.5em; /* 24px */
+}
+
+h5 {
+    font-size: 1.25em; /* 20px */
+}
+
+h6 {
+    font-size: 1em; /* 16px */
+}
+
+p {
+    margin-bottom: 1em; /* Giving paragraphs a little breathing room */
+}
+
+a {
+    color: black; /* Typical link color, can be adjusted */
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* use vh units to ensure full viewport height */
+ }
+ 
+
+
+
+
+.navbar {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 300px;
+
+
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        justify-content: space-between; 
+
+        li {
+
+            padding: 1em;
+
+            a {
+                color: white;
+                text-align: center;
+
+            }
+
+            h1 {
+                color: white;
+                text-align: center;
+                text-decoration: none;
+				cursor: default;
+              
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin-bottom: 12px;
+    }
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;  /* Smooth transition for the hover effect */
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        
+
+    }
+
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+.socials {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.card-left {
+    flex-grow: 1;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+
+.footer {
+    background-color: #333;
+    color: #eaeaea;
+    padding: 30px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;    
+    width: 100%;
+
+    .footer-content {
+        max-height: 35vh;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+
+
+    .footer-section {
+        padding: 0 20px; /* Gives some spacing on left and right */
+        
+    }
+    
+    @media (max-width: 768px) {
+        .footer-content {
+            padding: 0 15px; /* Little padding for mobile screens */
+        }
+    }
+}
