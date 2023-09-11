@@ -24,6 +24,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/assets", site_root))
             // serve the favicon from /favicon.ico
             .service(favicon)
+            .service(walkerdev)
             .leptos_routes(
                 leptos_options.to_owned(),
                 routes.to_owned(),
@@ -46,6 +47,18 @@ async fn favicon(
     let site_root = &leptos_options.site_root;
     Ok(actix_files::NamedFile::open(format!(
         "{site_root}/favicon.ico"
+    ))?)
+}
+
+#[cfg(feature = "ssr")]
+#[actix_web::get("walkerdev.png")]
+async fn walkerdev(
+    leptos_options: actix_web::web::Data<leptos::LeptosOptions>,
+) -> actix_web::Result<actix_files::NamedFile> {
+    let leptos_options = leptos_options.into_inner();
+    let site_root = &leptos_options.site_root;
+    Ok(actix_files::NamedFile::open(format!(
+        "{site_root}/walkerdev.png"
     ))?)
 }
 

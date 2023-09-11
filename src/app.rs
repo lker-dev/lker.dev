@@ -60,7 +60,7 @@ fn Navbar(cx: Scope) -> impl IntoView {
     view! { cx,
         <nav class="navbar">
             <ul>
-                <li><a href="#"><img src="favicon.ico" alt="Logo made of W and @" /></a></li>
+                <li><a href="#"><img src="walkerdev.png" alt="Logo made of W and @" /></a></li>
                 <li><h1>"Jonathan Walker"</h1></li>
             </ul>
         </nav>
